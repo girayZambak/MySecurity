@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">My Security</string>
+    <string name="action_settings">Ayarlar</string>
+    <string name="drawer_opened">Opened</string>
+    <string name="drawer_closed">Closed</string>
+
+    <string name="title_activity_kisiler">Kişiler</string>
+    <string name="title_activity_login">Giriş</string>
+    <string name="title_activity_confirm">Onay</string>
+    <string name="title_activity_registration">Yeni Kullanıcı</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+    <!-- Strings related to login -->
+    <string name="prompt_phone_number">Telefon Numarası</string>
+    <string name="prompt_password">Şifre</string>
+    <string name="action_sign_in">Giriş</string>
+    <string name="action_sign_in_short">Giriş</string>
+    <string name="action_confirm_user">Onayla</string>
+    <string name="prompt_confirm_code">Onay Kodu</string>
+    <string name="prompt_new_user">Yeni Kullanıcı</string>
+    <string name="prompt_registration_name">Ad</string>
+    <string name="prompt_registration_surname">Soyad</string>
+    <string name="prompt_registration_phone_number_code">+90</string>
+    <string name="prompt_registration_phone_number">Telefon Numaranız</string>
+    <string name="prompt_registration_date_birth">Doğum Tarihi</string>
+    <string name="prompt_registration_password">Şifre</string>
+    <string name="prompt_registration_replace_password">Şifre Tekrarı</string>
+    <string name="prompt_registration_button">Kaydet</string>
+
+    <string-array name="alanKodu">
+        <item>+90</item>
+        <item>+91</item>
+        <item>+92</item>
+    </string-array>
+</resources>
