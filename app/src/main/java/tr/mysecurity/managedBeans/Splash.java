@@ -38,6 +38,7 @@ public class Splash  extends AppCompatActivity {
             if (regid.isEmpty()) {
                 new RegisterApp(getApplicationContext(), gcm, getAppVersion(getApplicationContext())).execute();
             } else {
+                //Test Commit thkskn
                 Toast.makeText(getApplicationContext(), "Bu cihaz kaydedilmis", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 finish();
