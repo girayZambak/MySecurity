@@ -9,22 +9,18 @@ public class UrlEnum{
 
     public static final String CONFIRM_USER = BASE_URL+"confirm/checkConfirmSaveUser";
 
+    public static final String LOCATION_SEND = BASE_URL+"location/sendLocation";
+    public static final String LOCATION_GET_BY_EMERGENCY = BASE_URL+"location/getLocationByEmergency";
 
-/*
-    public static final String GET_LOCATION = BASE_URL+"location/getLocation";
-    public static final String SAVE_ACIL_KISI = BASE_URL+"acilKisi/saveAcilKisi";
-    public static final String GET_ACIL_KISI = BASE_URL+"acilKisi/searchAcilKisi";
-    public static final String GET_UNCONFIRMED_ACIL_KISI = BASE_URL+"acilKisi/unConfirmedAcilKisi";
-    public static final String CONFIRM_ACIL_KISI = BASE_URL+"acilKisi/confirmAcilKisi";
-    public static final String KISI_LISTEM = BASE_URL+"acilDurum/getAcilDurum";
-    public static final String SAVE_LOCATION = BASE_URL+"location/saveLocation";
-    public static final String SAVE_ACIL_DURUM = BASE_URL+"acilDurum/saveAcilDurum";
-    public static final String STOP_ACIL_DURUM = BASE_URL+"acilDurum/stopAcilDurum";
-    public static final String GET_KULLANICI = BASE_URL+"kullanici/getKullanici";
-    public static final String SAVE_KULLANICI = BASE_URL+"kullanici/saveKullanici";
-    public static final String UPDATE_KULLANICI = BASE_URL+"kullanici/updateKullanici";
-    public static final String GET_ACIL_DURUM = BASE_URL+"acilDurum/getAcilDurum";
-    public static final String GET_AKTIF_ACIL_DURUM = BASE_URL+"acilDurum/getAktifAcilDurum";
-*/
+    public static final String EMERGENCY_PERSON_CREATE = BASE_URL+"emergencyPerson/createEmergencyPerson";
+    public static final String EMERGENCY_PERSON_CONFIRM = BASE_URL+"emergencyPerson/confirmEmergencyPerson";
+    public static final String EMERGENCY_PERSON_DELETE = BASE_URL+"emergencyPerson/deleteEmergencyPerson";
+    public static final String EMERGENCY_PERSONS_GET_MY = BASE_URL+"emergencyPerson/getMyEmergencyPersons";
+    public static final String EMERGENCY_PERSONS_GET_FOLLOWING = BASE_URL+"emergencyPerson/getFollowingEmergencyPersons";
+
+    public static final String EMERGENCY_CREATE = BASE_URL+"emergency/createEmergency";
+    public static final String EMERGENCY_CHECK_ACTIVE = BASE_URL+"emergency/checkActiveEmergency";
+    public static final String EMERGENCY_PASSIVE = BASE_URL+"emergency/passiveEmergency";
+
 
 }
