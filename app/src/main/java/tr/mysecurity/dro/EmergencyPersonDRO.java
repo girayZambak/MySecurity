@@ -13,6 +13,9 @@ public class EmergencyPersonDRO {
     private String surname;
     private Boolean active;
     private Boolean isConfirmed;
+    private Boolean isEmergencySms;
+    private Boolean isEmergencyFollow;
+    private Long fkServerEmergencyPersonId;
 
     public EmergencyPersonDRO(JSONObject jsonObject) throws JSONException {
         this.id = jsonObject.getLong("id");
@@ -24,9 +27,11 @@ public class EmergencyPersonDRO {
         this.surname = jsonObject.getString("surname");
         this.active = jsonObject.getBoolean("active");
         this.isConfirmed = jsonObject.getBoolean("isConfirmed");
+        this.isEmergencyFollow =  jsonObject.getBoolean("isEmergencyFollow");
+        this.isEmergencySms =  jsonObject.getBoolean("isEmergencySms");
     }
 
-    public EmergencyPersonDRO(Long id, Long fkSenderUserId, Long fkReceiverNumberId, String areaCode, String number, String name, String surname, Boolean active, Boolean isConfirmed) {
+    public EmergencyPersonDRO(Long id, Long fkSenderUserId, Long fkReceiverNumberId, String areaCode, String number, String name, String surname, Boolean active, Boolean isConfirmed, Boolean isEmergencySms, Boolean isEmergencyFollow, Long fkServerEmergencyPersonId) {
         this.id = id;
         this.fkSenderUserId = fkSenderUserId;
         this.fkReceiverNumberId = fkReceiverNumberId;
@@ -36,6 +41,33 @@ public class EmergencyPersonDRO {
         this.surname = surname;
         this.active = active;
         this.isConfirmed = isConfirmed;
+        this.isEmergencySms = isEmergencySms;
+        this.isEmergencyFollow = isEmergencyFollow;
+        this.fkServerEmergencyPersonId = fkServerEmergencyPersonId;
+    }
+
+    public Long getFkServerEmergencyPersonId() {
+        return fkServerEmergencyPersonId;
+    }
+
+    public void setFkServerEmergencyPersonId(Long fkServerEmergencyPersonId) {
+        this.fkServerEmergencyPersonId = fkServerEmergencyPersonId;
+    }
+
+    public Boolean getIsEmergencySms() {
+        return isEmergencySms;
+    }
+
+    public void setIsEmergencySms(Boolean isEmergencySms) {
+        this.isEmergencySms = isEmergencySms;
+    }
+
+    public Boolean getIsEmergencyFollow() {
+        return isEmergencyFollow;
+    }
+
+    public void setIsEmergencyFollow(Boolean isEmergencyFollow) {
+        this.isEmergencyFollow = isEmergencyFollow;
     }
 
     public Long getId() {

@@ -4,8 +4,8 @@ package tr.mysecurity.util.enums;
  * Created by user on 13.04.2016.
  */
 public enum TrackingEvent {
-    USER_LOGIN("User", "Login"),
-    USER_LOGOUT("User", "Logout"),
+    USER_LOGIN("Userr", "Login"),
+    USER_LOGOUT("Userr", "Logout"),
     PING_SENT("Ping", "Sent");
 
     private String mCategory;

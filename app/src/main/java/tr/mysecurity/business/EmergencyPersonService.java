@@ -15,7 +15,7 @@ import tr.mysecurity.util.enums.UrlEnum;
 public class EmergencyPersonService {
     private CallRestService callRestService;
 
-    public EmergencyPersonDRO createEmergencyPerson(Long fkSenderUserId, String areaCode, String number, String name, String surname){
+    public EmergencyPersonDRO createEmergencyPerson(Long fkSenderUserId, String areaCode, String number, String name, String surname, Boolean emergencySms, Boolean emergencyFollow){
         EmergencyPersonDRO emergencyPersonDRO = null;
         try{
             JSONObject jsonObject = new JSONObject();
@@ -25,6 +25,38 @@ public class EmergencyPersonService {
             jsonObject.put("number", number);
             jsonObject.put("name", name);
             jsonObject.put("surname", surname);
+            jsonObject.put("emergencySms", emergencySms);
+            jsonObject.put("emergencyFollow", emergencyFollow);
+
+            String data = jsonObject.toString();
+
+            if (callRestService == null) {
+                callRestService = new CallRestService();
+            }
+
+            JSONObject object = callRestService.callPost(UrlEnum.EMERGENCY_PERSON_CREATE, data);
+            if (object != null) {
+                if (object.getString("emergencyPersonDRO") != "null") {
+                    emergencyPersonDRO = new EmergencyPersonDRO(object.getJSONObject("emergencyPersonDRO"));
+
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return emergencyPersonDRO;
+    }
+
+    public EmergencyPersonDRO updateEmergencyPerson(Long fkEmergencyPersonId, Boolean emergencySms, Boolean emergencyFollow){
+        EmergencyPersonDRO emergencyPersonDRO = null;
+        try{
+            JSONObject jsonObject = new JSONObject();
+
+            jsonObject.put("fkEmergencyPersonId", fkEmergencyPersonId);
+            jsonObject.put("emergencySms", emergencySms);
+            jsonObject.put("emergencyFollow", emergencyFollow);
 
             String data = jsonObject.toString();
 
