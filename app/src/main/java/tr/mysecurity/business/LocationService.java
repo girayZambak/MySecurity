@@ -12,6 +12,13 @@ import tr.mysecurity.util.enums.UrlEnum;
 public class LocationService {
     private CallRestService callRestService;
 
+    private LocationService() {
+    }
+
+    public static LocationService getInstance(){
+        return new LocationService();
+    }
+
     public Boolean sendLocation(Double latitude, Double longitude, Long fkEmergencyId, Long fkLocationSendType){
         try{
             JSONObject jsonObject = new JSONObject();

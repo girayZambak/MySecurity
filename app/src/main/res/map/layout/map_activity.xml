@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/haritafragment"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="anaSayfayaDon"
+        android:background="@android:color/transparent"
+        android:text="home"
+        android:id="@+id/anaSayfayaDon"
+        android:layout_gravity="center"
+        android:height="40dp"
+        android:width="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="zoomIn"
+        android:text="+"
+        android:background="@android:color/transparent"
+        android:id="@+id/btnZoomIn"
+        android:layout_gravity="center"
+        android:height="40dp"
+        android:width="40dp"
+        android:layout_above="@+id/btnZoomOut"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="zoomOut"
+        android:background="@android:color/transparent"
+        android:text="-"
+        android:id="@+id/btnZoomOut"
+        android:layout_gravity="center"
+        android:height="40dp"
+        android:width="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="mapType"
+        android:background="@android:color/transparent"
+        android:text="Uydu"
+        android:id="@+id/map_type"
+        android:layout_gravity="center"
+        android:height="40dp"
+        android:width="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/focus_map"
+        android:layout_toEndOf="@+id/focus_map" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="focus"
+        android:text="focus"
+        android:id="@+id/focus_map"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center"
+        android:height="40dp"
+        android:width="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btnZoomOut"
+        android:layout_toStartOf="@+id/btnZoomOut" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="follow"
+        android:text="follow"
+        android:id="@+id/follow"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center"
+        android:height="40dp"
+        android:width="40dp"
+        android:layout_alignBottom="@+id/focus_map"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

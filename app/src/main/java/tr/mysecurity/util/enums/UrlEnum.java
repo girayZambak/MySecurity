@@ -1,7 +1,7 @@
 package tr.mysecurity.util.enums;
 
 public class UrlEnum{
-    public static final String BASE_URL = "http://95.5.89.207:8082/";
+    public static final String BASE_URL = "http://78.175.45.174:8082/";
 
     public static final String SAVE_USER = BASE_URL+"user/saveUser";
     public static final String LOGIN = BASE_URL+"user/logIn";
